@@ -1,0 +1,144 @@
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0;">
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .container {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #F5F5F0 0%, #E8DDD3 50%, #D4C4B0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .welcome-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 24px;
+      padding: 60px 50px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      max-width: 600px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .icon-circle {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #3D3D3D 0%, #1A1A1A 100%);
+      border-radius: 50%;
+      margin: 0 auto 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: float 3s ease-in-out infinite;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .icon-circle svg {
+      width: 50px;
+      height: 50px;
+      stroke: #F5F5F0;
+    }
+
+    h1 {
+      color: #2D2D2D;
+      font-size: 2.8em;
+      margin: 0 0 20px 0;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .subtitle {
+      color: #8B7355;
+      font-size: 1.3em;
+      margin: 0 0 40px 0;
+      font-weight: 400;
+    }
+
+    .description {
+      color: #5D5D5D;
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #3D3D3D 0%, #1A1A1A 100%);
+      color: #F5F5F0;
+      padding: 16px 48px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, #4D4D4D 0%, #2A2A2A 100%);
+    }
+
+    .decorative-dots {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 40px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #A89080;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: 0.2s;
+      background: #8B7355;
+    }
+
+    .dot:nth-child(3) {
+      animation-delay: 0.4s;
+      background: #6D5D4D;
+    }
+  </style>
+
+  <div class="container">
+    <div class="welcome-card">
+      <div class="icon-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </div>
+
+      <h1>¡Bienvenido!</h1>
+      <p class="subtitle">Nos alegra tenerte aquí</p>
+
+      <p class="description">
+        Estás a punto de comenzar una experiencia única.
+        Explora, descubre y disfruta de todo lo que tenemos preparado para ti.
+      </p>
+
+      <button class="btn" onclick="alert('¡Empecemos!')">Comenzar</button>
+
+      <div class="decorative-dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
+</div>
